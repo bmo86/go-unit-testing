@@ -22,6 +22,6 @@ func main() {
 		log.Printf("Found Server :c")
 	}
 
-	log.Printf("Server mount in port : ", 8080)
+	log.Printf("Server mount in port : 8080")
 
 }

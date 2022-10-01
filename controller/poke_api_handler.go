@@ -34,7 +34,7 @@ func respondWithJSON(w http.ResponseWriter, code int, payload interface{}) {
 func GetPokemon(w http.ResponseWriter, r *http.Request) {
 	id := mux.Vars(r)["idPoke"]
 
-	req := fmt.Sprint("https://pokeapi.co/api/v2/pokemon/%s", id)
+	req := fmt.Sprintf("https://pokeapi.co/api/v2/pokemon/%s", id)
 
 	res, err := http.Get(req)
 	if err != nil {
