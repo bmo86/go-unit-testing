@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"go-testing-pokeAPI/models"
-	"go-testing-pokeAPI/util"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -53,10 +52,10 @@ func GetPokemon(w http.ResponseWriter, r *http.Request) {
 		log.Fatal(err)
 	}
 
-	parsedPoke, err := util.ParsePokemon(apiPoke)
+	/* parsedPoke, err := util.ParsePokemon(apiPoke)
 	if err != nil {
 		respondWithJSON(w, http.StatusInternalServerError, fmt.Sprintf("err found: %s", err.Error()))
-	}
+	} */
 
-	respondWithJSON(w, http.StatusOK, parsedPoke)
+	respondWithJSON(w, http.StatusOK, apiPoke)
 }

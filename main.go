@@ -15,7 +15,7 @@ func Add(a, b int) int {
 func main() {
 	r := mux.NewRouter()
 
-	r.HandleFunc("/poke/{id}", controller.GetPokemon).Methods(http.MethodGet)
+	r.HandleFunc("/poke/{idPoke}", controller.GetPokemon).Methods(http.MethodGet)
 
 	err := http.ListenAndServe(":8080", r)
 	if err != nil {
